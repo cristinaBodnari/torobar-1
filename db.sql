@@ -17,7 +17,7 @@ CREATE TABLE sub_categories(
 DROP TABLE IF EXISTS items;
 CREATE TABLE items(
 	id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    category INT(5) NOT NULL,
+    category INT(5),
     name VARCHAR(30) NOT NULL,
     price INT(4) NOT NULL,
 	description VARCHAR(255),
