@@ -3,7 +3,7 @@
     // requires Item, connection to be included
     class ItemRepository{
 
-        public static function getItem($id){
+        public static function get($id){
             //returns an object of type Item
             if(gettype($id) == "integer"){
                 // get the global item
@@ -14,7 +14,7 @@
                 $result = mysqli_query($database, $query);
 
                 if(!$result){
-                    exit("Cannot connect to the database.");
+                    return null;
                 }
                 
                 $assoc = mysqli_fetch_assoc($result);
@@ -23,7 +23,7 @@
             }
         }
 
-        public static function getAllItems(){
+        public static function getAll(){
             // returns an array of items, empty if error or none are existent
             global $database;
 
@@ -45,7 +45,7 @@
             return $items;
         }
 
-        public static function insertItem($item){
+        public static function insert($item){
             // Returns false if connection failed and/or query was not successful
             if(get_class($item) == "Item"){
                 global $database;
@@ -60,7 +60,7 @@
             }
         }
 
-        public static function updateItem($item){
+        public static function update($item){
             // Returns false if connection failed and/or query was not successful
             if(get_class($item) == "Item"){
                 global $database;
@@ -73,5 +73,34 @@
 
                 return false;
             }
+        }
+
+        public static function delete($obj){
+            if($obj != null){
+                if(gettype($obj) == "integer"){
+                    global $database;
+
+                    $query = sprintf("DELETE FROM items WHERE id=%d", $obj);
+
+                    if(mysqli_query($database, $query)){
+                        return true;
+                    }
+
+                    return false;
+                } else if(gettype($obj) == "object"){
+                    if(get_class($obj) == "Item"){
+                        global $database;
+
+                        $query = sprintg("DELETE FROM items WHERE id=%d", $obj->getId());
+
+                        if(mysqli_query($database, $query)){
+                            return true;
+                        }
+                        
+                        return false;
+                    }
+                }
+            }
+            
         }
     }
