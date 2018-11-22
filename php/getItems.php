@@ -13,7 +13,9 @@
         }
         
     } else if($_SERVER['REQUEST_METHOD'] === "GET"){
-
+        require("models/Album.php");
+        $album = new Album();
+        echo (count($album->getPhotos()));
         // require("models/Item.php");
         // require("models/Menu.php");
 
