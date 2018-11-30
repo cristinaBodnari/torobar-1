@@ -18,6 +18,26 @@
             }
         }
 
+        public static function getByDate(){
+            global $database;
+
+            $events = array();
+
+            query = sprintf("SELECT * FROM events WHERE date>=NOW() ORDER BY date desc");
+
+            $results = mysqli_query($database, $query);
+
+            if(!$result){
+                return null;
+            }
+
+            while($assoc = mysqli_fetch_assoc($result)){
+                array_push($events, new Event(array('id' => $assoc['id'], 'title' => $assoc['title'], 'date' => $assoc['date'], 'time' => $assoc['time'], 'description' => $assoc['description'], 'imageURL' => $assoc['image'])));
+            }
+
+            $events;
+        }
+
         public static function getAll(){
             global $database;
 
@@ -34,6 +54,8 @@
             while($item = mysqli_fetch_assoc($result)){
                 array_push($events, new Event(array('id' => $assoc['id'], 'title' => $assoc['title'], 'date' => $assoc['date'], 'time' => $assoc['time'], 'description' => $assoc['description'], 'imageURL' => $assoc['image'])));
             }
+            
+            return $events;
         }
 
         public static function update($obj){
