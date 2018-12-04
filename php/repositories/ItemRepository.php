@@ -5,7 +5,7 @@
 
         public static function get($id){
             //returns an object of type Item
-            if(gettype($id) == "integer"){
+            // if(gettype($id) == "integer"){
                 // get the global item
                 global $database;
                 
@@ -19,8 +19,9 @@
                 
                 $assoc = mysqli_fetch_assoc($result);
 
-                return new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price']));
-            }
+                return new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'], 'description' => $assoc['description']));
+            // }
+            return null;
         }
 
         public static function getAll(){
@@ -38,8 +39,8 @@
                 exit("Cannot connect to the database.");
             }
 
-            while($item = mysqli_fetch_assoc($result)){
-                array_push($items, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'])));
+            while($assoc = mysqli_fetch_assoc($result)){
+                array_push($items, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'], 'description' => $assoc['description'])));
             }
 
             return $items;
