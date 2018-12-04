@@ -20,5 +20,13 @@
             }
         }
 
+        public function setItems($obj = null){
+            if(isset($obj)){
+                if(gettype($obj) == "array"){
+                    $this->items = $obj;
+                }
+            }
+        }
+
     }
     
