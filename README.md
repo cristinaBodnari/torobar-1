@@ -4,8 +4,8 @@ MySQL login:
 
 Server: den1.mysql2.gear.host
 
-Database: toro
+Database: torobar
 
-Username: toro
+Username: torobar
 
-Password: Wn6z3MG35g_!
+Password: At02Mm2~_t8k

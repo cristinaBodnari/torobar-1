@@ -23,7 +23,7 @@
 
             $events = array();
 
-            query = sprintf("SELECT * FROM events WHERE date>=NOW() ORDER BY date desc");
+            query = "SELECT * FROM events WHERE date=NOW() ORDER BY date desc";
 
             $results = mysqli_query($database, $query);
 
