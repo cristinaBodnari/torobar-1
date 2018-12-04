@@ -103,4 +103,28 @@
             }
             
         }
+
+        public static function getCategoryItems($categoryId){
+            if(gettype($categoryId) == "integer"){
+                global $database;
+
+                $arr = array();
+
+                $query = printf("SELECT * FROM items WHERE category=%d", $categoryId);
+
+                $result = mysqli_query($database, $query);
+
+                if(!$result){
+                    return null;
+                }
+                
+                while($assoc = mysqli_fetch_assoc($result)){
+                    array_push($arr, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'])));
+                }
+
+                return $arr;
+            } else {
+                return null;
+            }
+        }
     }
