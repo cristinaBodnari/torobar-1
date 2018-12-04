@@ -7,15 +7,18 @@
         // Items have to be public in order to work with menu
         public $id;
         public $name;
+        public $nameDK;
         public $price;
         public $description;
+        public $descriptionDK;
 
         public function Item($obj = null){
             if(isset($obj)){
                 if(gettype($obj) == "array"){
+                    $id = intval($obj['id']);
                     if(array_key_exists("id", $obj)){
-                        if(gettype($obj["id"]) == "integer"){
-                            $this->id = $obj["id"];
+                        if($id != 0 || $id != null){
+                            $this->id = $id;
                         }
                     }
                     if(array_key_exists("name", $obj)){
@@ -23,14 +26,25 @@
                             $this->name = $obj["name"];
                         }
                     }
+                    if(array_key_exists("nameDK", $obj)){
+                        if(gettype($obj["nameDK"]) == "string"){
+                            $this->nameDK = $obj["nameDK"];
+                        }
+                    }
                     if(array_key_exists("price", $obj)){
                         if(gettype($obj["price"]) == "string"){
-                            $this->price = $obj["price"];
+                            $price = intval($obj["price"]);
+                            $this->price = $price;
                         }
                     }
                     if(array_key_exists("description", $obj)){
                         if(gettype($obj["description"]) == "string"){
                             $this->description = $obj["description"];
+                        }
+                    }
+                    if(array_key_exists("descriptionDK", $obj)){
+                        if(gettype($obj["descriptionDK"]) == "string"){
+                            $this->descriptionDK = $obj["descriptionDK"];
                         }
                     }
                 }
