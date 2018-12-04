@@ -23,35 +23,6 @@
 </head>
 <body>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>ToroBar</h1>
-</div>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-about" href="#">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-menu" href="#">Menu</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-gallery" href="#">Gallery</a>
-      </li>    
-      <li class="nav-item">
-        <a class="nav-events" href="#">Events</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-opening" href="#">Opening Hours</a>
-      </li>
-    </ul>
-  </div>  
-</nav>
 
 <div class="container" style="margin-top:30px">
   <div class="row">
