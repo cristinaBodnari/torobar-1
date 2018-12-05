@@ -2,6 +2,7 @@
     class Album{
         private $id;
         private $title;
+        private $titleDK;
         private $photos = array();
 
         public function Album($obj = null){
@@ -15,6 +16,11 @@
                 if(array_key_exists("photos", $obj)){
                     if(gettype($obj["photos"]) == "array"){
                         $this->photos = $obj["photos"];
+                    }
+                }
+                if(array_key_exists("titleDK", $obj)){
+                    if(gettype($obj["titleDK"]) == "string"){
+                        $this->titleDK = $obj["titleDK"];
                     }
                 }
             } else if(gettype($obj) == "object"){

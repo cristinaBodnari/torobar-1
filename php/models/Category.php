@@ -2,7 +2,9 @@
     class Category{
         public $id;
         public $name;
+        public $nameDK;
         public $description;
+        public $descriptionDK;
         public $items;
 
         public function Category($obj = null){
@@ -12,10 +14,22 @@
                         $this->id = $obj['id'];
                     if(array_key_exists("name", $obj))
                         $this->name = $obj['name'];
+                    if(array_key_exists("nameDK", $obj))
+                        $this->nameDK = $obj['nameDK'];
                     if(array_key_exists("description", $obj))
                         $this->description = $obj['description'];
+                    if(array_key_exists("descriptionDK", $obj))
+                        $this->descriptionDK = $obj['descriptionDK'];
                     if(array_key_exists("items", $obj))
                         $this->items = $obj['items'];
+                }
+            }
+        }
+
+        public function setItems($obj = null){
+            if(isset($obj)){
+                if(gettype($obj) == "array"){
+                    $this->items = $obj;
                 }
             }
         }
