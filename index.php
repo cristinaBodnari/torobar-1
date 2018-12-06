@@ -20,10 +20,10 @@
         <h1 class="display-2">ToroBar</h1>
          <div class="btn-group" role="group" aria-label="Basic example">
           <nav class="nav nav-pills nav-justified navbar-expand-sm">
-            <a class="btn btn-outline-success m-3" type="button">About</a>
-            <a class="btn btn-outline-success m-3" type="button">Events</a>
-            <a class="btn btn-outline-success m-3" type="button">Gallery</a>
-            <a class="btn btn-outline-success m-3" type="button">Menu</a> 
+            <a class="button btn-light btn-lg m-2" href="#about">About</a>
+            <a class="button btn-light btn-lg m-2" href="#menu">Menu</a>
+            <a class="button btn-light btn-lg m-2" href="#events">Events</a>
+            <a class="button btn-light btn-lg m-2" href="#gallery">Gallery</a>
           </nav>
         <!-- /old nav 
           <a class="button btn-light btn-lg m-2" href="#about">About</a>
