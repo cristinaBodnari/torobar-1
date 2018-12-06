@@ -3,6 +3,102 @@
   $title = "Index";
   require_once("shared/header.php");
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ToroBar</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
+  <body>
+   <!-- jumbotron -->
+   <div class="jumbotron jumbotron-fluid bg-info text-white">
+      <div class="container text-center pt-5 ">
+        <h1 class="display-2">ToroBar</h1>
+         <div class="btn-group" data-toggle="button" role="group" aria-label="Basic example">
+          <a class="button btn-light btn-lg m-2" href="#about">About</a>
+          <a class="button btn-light btn-lg m-2" href="#menu">Menu</a>
+          <a class="button btn-light btn-lg m-2" href="#events">Events</a>
+          <a class="button btn-light btn-lg m-2" href="#gallery">Gallery</a>
+         </div> 
+      </div>
+    </div>  
+  <!-- /jumbotron -->   
+    
+    <div class="container pt-4"> <!-- content with fixed width -->
+      <!-- Monthly Specials -->
+     <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <div class="card-body">
+             <h4 class="card-title">This Month's Drink Specials</h4>
+             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+             Aenean commodo ligula eget dolor.</p>
+             <a href="#menu" class="btn btn-primary">See all Drinks</a>
+           </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <div class="card-body">
+             <h4 class="card-title">The Next Upcoming Events</h4>
+             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+             Aenean commodo ligula eget dolor. </p>
+             <a href="#menu" class="btn btn-primary">See all Drinks</a>
+           </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <div class="card-body">
+             <h4 class="card-title">Happy Hour every Monday to Wednesday</h4>
+             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+             Aenean commodo ligula eget dolor.</p>
+             <a href="#menu" class="btn btn-primary">See All Events</a>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.CONTAINER-->  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,6 +179,8 @@
 
 </body>
 </html>
+Insert code here -->
+
 <?php 
   require_once("shared/footer.php");
 ?>

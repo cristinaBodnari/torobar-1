@@ -3,7 +3,8 @@
   $title = "Galerry";
   require_once("shared/header.php");
 ?>
-  <!-- Insert code here -->
+    <div class="container pt-4"> <!-- /open container --> 
+    </div>     <!-- /close container -->   
 <?php 
   require_once("shared/footer.php");
 ?>
