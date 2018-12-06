@@ -22,14 +22,9 @@
           <nav class="nav nav-pills nav-justified navbar-expand-sm">
             <a class="button btn-light btn-lg m-2" href="#about">About</a>
             <a class="button btn-light btn-lg m-2" href="#menu">Menu</a>
-            <a class="button btn-light btn-lg m-2" href="#events">Events</a>
-            <a class="button btn-light btn-lg m-2" href="#gallery">Gallery</a>
+            <a class="button btn-light btn-lg m-2 btn-group-vertical" href="#events">Events</a>
+            <a class="button btn-light btn-lg m-2 btn-group-vertical" href="#gallery">Gallery</a>
           </nav>
-        <!-- /old nav 
-          <a class="button btn-light btn-lg m-2" href="#about">About</a>
-          <a class="button btn-light btn-lg m-2" href="#menu">Menu</a>
-          <a class="button btn-light btn-lg m-2" href="#events">Events</a>
-          <a class="button btn-light btn-lg m-2" href="#gallery">Gallery</a> -->
          </div> 
       </div>
     </div>  
