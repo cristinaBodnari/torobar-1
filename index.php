@@ -18,7 +18,7 @@
    <div class="jumbotron jumbotron-fluid bg-info text-white">
       <div class="container text-center pt-5 ">
         <h1 class="display-2">ToroBar</h1>
-         <div class="btn-group" data-toggle="button" role="group" aria-label="Basic example">
+         <div class="btn-group" role="group" aria-label="Basic example">
           <a class="button btn-light btn-lg m-2" href="#about">About</a>
           <a class="button btn-light btn-lg m-2" href="#menu">Menu</a>
           <a class="button btn-light btn-lg m-2" href="#events">Events</a>
@@ -77,13 +77,6 @@
   </body>
 </html>
     
-
-
-
-
-
-
-
 
 
 
