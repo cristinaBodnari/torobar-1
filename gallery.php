@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
   <body>
-    <!-- nav -->
+    <!-- /nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
      <div class="container">
       <a class="navbar-brand order-1 mr-0" href="#http://wwww.torobar.com/home" target="_blank">ToroBar</a>
@@ -36,7 +36,23 @@
         </div>
        </div>
       </div> 
-    </nav>
+    </nav> 
     <!-- nav -->
+
+    <!-- jumbotron -->
+      <div class="jumbotron jumbotron-fluid bg-info text-white">
+        <div class="container text-center pt-5 ">
+          <h1 class="display-2 m-3">ToroBar</h1>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <nav class="nav nav-pills nav-justified navbar-expand-sm">
+              <a class="button btn-light btn-lg m-2" href="about.php">About</a>
+              <a class="button btn-light btn-lg m-2" href="menu.php">Menu</a>
+              <a class="button btn-light btn-lg m-2" href="events.php">Events</a>
+              <a class="button btn-light btn-lg m-2" href="gallery.php">Gallery</a>
+            </nav>
+          </div> 
+        </div>
+      </div>  
+    <!-- /jumbotron -->  
   </body>
 </html>    

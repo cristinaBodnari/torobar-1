@@ -42,53 +42,8 @@
 
 
 
-<!doctype html>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
 
-  <title><?php echo $title ?></title>
-  <meta name="description" content="">
-  <meta name="author" content="The best group">
 
-  Latest compiled and minified CSS 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-</head>
 
-<body>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <img src="leafsheader.jpg" width="100" height="80" alt="My Pic">
-  <h1>ToroBar</h1>
-</div>
-
-<nav class="navbar navbar-expand-sm navbar-dark">
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <div class="d-inline p-2 bg-primary text-white">
-          <li class="nav-item"> 
-          <a class="nav-link" href="#">About Us</a>
-          </li>
-      </div>
-      <div class="d-inline p-2 bg-primary text-white">
-          <li class="nav-item"> 
-          <a class="nav-link" href="#">About Us</a>
-          </li>
-      </div>
-      <div class="d-inline p-2 bg-primary text-white">
-          <li class="nav-item"> 
-          <a class="nav-link" href="#">About Us</a>
-          </li>
-      </div>
-      <div class="d-inline p-2 bg-primary text-white">
-          <li class="nav-item"> 
-          <a class="nav-link" href="#">About Us</a>
-          </li>
-      </div>
-    </ul>
-  </div>  
-</nav>
-
-Insert code here -->
