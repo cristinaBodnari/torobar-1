@@ -28,7 +28,6 @@
   
   <!-- Gallery -->
   <div class="container pt-4"> <!-- /open container --> 
-    <h1 class="display-4 text-center my-5 text-muted">Speakers</h1>
       <div class="row">
         <?php if($events != null) {?>
           <?php foreach($events as $event) {?>
