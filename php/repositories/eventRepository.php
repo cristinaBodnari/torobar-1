@@ -22,8 +22,8 @@
             global $database;
 
             $events = array();
-
-            query = "SELECT * FROM events WHERE date=NOW() ORDER BY date desc";
+            
+            $query = "SELECT * FROM events WHERE date=NOW() ORDER BY date desc";
 
             $results = mysqli_query($database, $query);
 
@@ -108,5 +108,22 @@
                     }
                 }
             }
+        }
+
+        public static function getNearest(){
+            global $database;
+
+            $date = date("Y-m-d");
+            $query = sprintf("SELECT * FROM events WHERE date>=%s ORDER BY date ASC LIMIT 1", $date);
+
+            $result = mysqli_query($database, $query);
+
+            if(!$result){
+                return null;
+            }
+
+            $assoc = mysqli_fetch_assoc($result);
+                
+            return new Event(array('id' => $assoc['id'], 'title' => $assoc['title'], 'date' => $assoc['date'], 'time' => $assoc['time'], 'description' => $assoc['description'], 'imageURL' => $assoc['image']));
         }
     }

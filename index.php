@@ -2,6 +2,9 @@
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Index";
   require_once("shared/header.php");
+  require("php/repositories/eventRepository.php");
+
+  $nearest_event = EventRepository::getNearest();
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +36,18 @@
     <div class="container pt-4"> <!-- content with fixed width -->
       <!-- Monthly Specials -->
      <div class="row">
+        <?php if($nearest_event != null){?>
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <div class="card-body">
+             <h4 class="card-title"><?php echo $nearest_event->title?></h4>
+             <p class="card-text"><?php echo $nearest_event->description?></p>
+             <a href="/menu" class="btn btn-primary">See all Drinks</a>
+           </div>
+          </div>
+        </div>
+      <?php } else { ?>
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
             <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
@@ -40,10 +55,11 @@
              <h4 class="card-title">This Month's Drink Specials</h4>
              <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
              Aenean commodo ligula eget dolor.</p>
-             <a href="#menu" class="btn btn-primary">See all Drinks</a>
+             <a href="/menu" class="btn btn-primary">See all Drinks</a>
            </div>
           </div>
         </div>
+      <?php } ?>
       
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
