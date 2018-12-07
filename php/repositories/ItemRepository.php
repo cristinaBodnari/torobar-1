@@ -34,7 +34,7 @@
             }
             while($assoc = mysqli_fetch_assoc($result)){
                 array_push($items, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'], 'description' => $assoc['description'])));
-                array_push($items, new Item(array('id' => $assoc['id'], 'nameDk' => $assoc['nameDk'],'price' => $assoc['price'], 'description' => $assoc['description'])));
+                array_push($items, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'], 'description' => $assoc['description'])));
 
             }
             return $items;
@@ -43,8 +43,8 @@
             // Returns false if connection failed and/or query was not successful
             if(get_class($item) == "Item"){
                 global $database;
-                $query = sprintf("INSERT INTO items (name, price, description) VALUES (%s, %d, %s)", $item->getName(), $item->getPrice(), $item->getDescription());
-                $query = sprintf("INSERT INTO items (nameDk, price, descriptionDk) VALUES (%s, %d, %s)", $item->getNameDk(), $item->getPrice(), $item->getDescriptionDk());
+                $query = sprintf("INSERT INTO items (name, price, description) VALUES (%s, %s, %s)", $item->getName(), $item->getPrice(), $item->getDescription());
+                $query = sprintf("INSERT INTO items (name, price, descriptionDk) VALUES (%s, %s, %s)", $item->getName(), $item->getPrice(), $item->getDescriptionDk());
 
                 
                 if( mysqli_query($database, $query)){
@@ -58,7 +58,7 @@
             if(get_class($item) == "Item"){
                 global $database;
                 $query = sprintf("UPDATE items SET name=%s, price=%d, description=%s WHERE id=%d", $item->getName(), $item->getPrice(), $item->getDescription(), $item->getId());
-                $query = sprintf("UPDATE items SET nameDk=%s, price=%d, descriptionDk=%s WHERE id=%d", $item->getNameDk(), $item->getPrice(), $item->getDescriptionDk(), $item->getId());
+                $query = sprintf("UPDATE items SET name=%s, price=%d, descriptionDk=%s WHERE id=%d", $item->getNameDk(), $item->getPrice(), $item->getDescriptionDk(), $item->getId());
 
                 if(mysqli_query($database, $query)){
                     return true;
@@ -101,7 +101,7 @@
                 
                 while($assoc = mysqli_fetch_assoc($result)){
                     array_push($arr, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'])));
-                    array_push($arr, new Item(array('id' => $assoc['id'], 'nameDk' => $assoc['nameDk'],'price' => $assoc['price'])));
+                    array_push($arr, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'])));
 
                 }
                 return $arr;
