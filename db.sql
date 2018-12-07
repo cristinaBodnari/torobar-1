@@ -17,7 +17,7 @@ CREATE TABLE items(
     nameDK VARCHAR(30) NOT NULL,
     price INT(4) NOT NULL,
 	description VARCHAR(255),
-    descriptionDK VARCHAR(255)
+    descriptionDK VARCHAR(255),
     FOREIGN KEY items(category) REFERENCES categories(id)
 );
 
@@ -29,7 +29,7 @@ CREATE TABLE events(
     date DATE NOT NULL,
     time VARCHAR(5),
     description VARCHAR(255),
-    descriptionDK VARCHAR(255)
+    descriptionDK VARCHAR(255),
     image VARCHAR(255)
 );
 

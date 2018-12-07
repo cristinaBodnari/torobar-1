@@ -3,6 +3,8 @@
   if(defined($title)){
     $title = "ToroBar";
   }
+
+  require_once("php/database/connect.php");
 ?>
 
 <!DOCTYPE html>

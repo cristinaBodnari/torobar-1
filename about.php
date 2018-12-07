@@ -24,13 +24,10 @@
        <!-- ABOUT -->
        <div class="row">
         <div class="col-lg">
-         <h3 class="mb-4">Welcome to ToroBar</h3>   <!-- MB-4 is margin spacing --> 
+         <h3 class="mb-4">HVEM ER VI</h3>   <!-- MB-4 is margin spacing --> 
           <img class="mb-4 img-fluid rounded d-none d-sm-block" src="img/pdx.jpg" alt="portland">
           <p>Torobar Torobar Torobar Torobar Torobar Torobar Torobar Torobar Torobar Torobar Torobar Torobar</p>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-          Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
-          ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat 
-          massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p> 
+          <p>We are a nice bar! </p> 
         </div>    
       </div><!-- /ABOUT -->   
     </div>

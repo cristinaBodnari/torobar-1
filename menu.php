@@ -1,6 +1,23 @@
 <?php
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Gallery";
+
+  require_once("php/models/Category.php");
+  require_once("php/repositories/CategoryRepository.php");
+  require_once("php/models/Item.php");
+  require_once("php/repositories/ItemRepository.php");
+
+  $categories = CategoryRepository::getAll();
+
+  if($categories == null){
+    
+  } else {
+    for($i=0; $i < count($categories); $i++){
+      $items = ItemRepository::getCategoryItems($categories[$i]->id);
+  
+      $categories[$i]->setItems($items);
+    }
+  }
 ?>
    
 <!DOCTYPE html>
@@ -22,6 +39,46 @@
       </div>  
     <!-- /jumbotron -->  
     <div class="container pt-4"> <!-- /open container --> 
+        <div class="row">
+        <?php if($categories != null) { ?>
+          <?php foreach($categories as $category) {?>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+              
+              <div class="card-body">
+              <h4 class="card-title"><?php echo $category->name?></h4>
+                  <table>
+                      <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Price</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <?php foreach($category->items as $item) {?>
+                          <tr >
+                              <td ><?php echo $item->title; ?></td>
+                              <td ><?php echo $item->price; ?></td>
+                          </tr>
+                        <?php } ?>
+                      </tbody>
+
+                      </tr>
+                  </table>
+
+              </div>
+              </div>
+            </div>
+          <?php } ?>
+        <?php } else { ?>
+                          
+          <div class="col-md-6 col-lg-4">
+            No items added
+          </div>
+
+        <?php } ?>
+      </div>
+
     </div>     <!-- /close container -->  
 
   </body>
