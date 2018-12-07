@@ -1,3 +1,17 @@
+ 
+body{
+	background-color: black;
+}
+
+h1 { 
+	font-family: Papyrus, fantasy; 
+	font-size: 200%; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: bold; 
+	line-height: 100%; 
+} 
+
  /***gallery style***/
 .gallery {
 -webkit-column-count: 3;
@@ -33,10 +47,3 @@ padding-right: 1.1rem;
 }
  /***gallery style end***/
 
-.bg{
- 	background-image: url("torobar/images/woodPlatesinBar.jpg") !important;
- 	background-color: black;
- 
- }
-
- 
