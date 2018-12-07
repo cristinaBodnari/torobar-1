@@ -1,6 +1,14 @@
 <?php
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Gallery";
+
+  require_once("shared/header.php");
+
+  require_once("php/database/connect.php");
+  require_once("php/models/Photo.php");
+  require_once("php/repositories/PhotoRepository.php");
+
+  $photos = PhotoRepository::getLatest();
 ?>
    
 <!DOCTYPE html>
@@ -25,54 +33,29 @@
     <div class="container pt-4"> <!-- /open container --> 
 
 
-<!-- Grid row -->
-<div class="gallery" id="gallery">
+    <!-- Grid row -->
+    <div class="gallery" id="gallery">
 
-  <!-- Grid column -->
-  <div class="mb-3 pics animation all 2">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt="Card image cap">
-  </div>
-  <!-- Grid column -->
+      <!-- Grid column -->
+      <?php if($photos != null) { ?>
+        <?php foreach($photos as $photo){ ?>
+          <div class="mb-3 pics animation all 2">
+            <img class="img-fluid" src="<?php echo $photo->url; ?>" alt="Image id <?php echo $photo->id; ?>">
+          </div>
+        <?php } ?>
+      <?php } else { ?>
+        <div class="row">
+          <div class="col" style="text-align: center">
+            <h3>No images!</h3>
+          </div>
+        </div>
+      <?php } ?>
+      <!-- Grid column -->
 
-  <!-- Grid column -->
-  <div class="mb-3 pics animation all 1">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" alt="Card image cap">
-  </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
-  <div class="mb-3 pics animation all 1">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card image cap">
-  </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
-  <div class="mb-3 pics animation all 2">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
-  </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
-  <div class="mb-3 pics animation all 2">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
-  </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
-  <div class="mb-3 pics animation all 1">
-    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card image cap">
-  </div>
-  <!-- Grid column -->
-
-</div>
-<!-- Grid row -->
-     
-     <!-- / everything goes here --> 
+    </div>
 
 
-
-    </div>     <!-- /close container -->  
-
+    </div> 
   </body>
 </html>    
 
