@@ -3,8 +3,6 @@
         public $id;
         public $name;
         public $nameDK;
-        public $description;
-        public $descriptionDK;
         public $items;
 
         public function Category($obj = null){

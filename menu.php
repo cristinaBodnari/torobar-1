@@ -13,11 +13,10 @@
   $categories = CategoryRepository::getAll();
 
   if($categories == null){
-    
+    echo "null";
   } else {
     for($i=0; $i < count($categories); $i++){
       $items = ItemRepository::getCategoryItems($categories[$i]->id);
-  
       $categories[$i]->setItems($items);
     }
   }
@@ -58,12 +57,12 @@
                       </tr>
                       </thead>
                       <tbody>
-                        <?php foreach($category->items as $item) {?>
+                         <?php foreach($category->items as $item) {?>
                           <tr >
-                              <td ><?php echo $item->title; ?></td>
+                              <td ><?php echo $item->name; ?></td>
                               <td ><?php echo $item->price; ?></td>
                           </tr>
-                        <?php } ?>
+                        <?php } ?> 
                       </tbody>
 
                       </tr>

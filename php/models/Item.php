@@ -28,8 +28,8 @@
                  
                     if(array_key_exists("price", $obj)){
                         if(gettype($obj["price"]) == "string"){
-                            $price = intval($obj["price"]);
-                            $this->price = $price;
+                            // $price = intval($obj["price"]);
+                            $this->price = $obj["price"];
                         }
                     }
                     if(array_key_exists("description", $obj)){

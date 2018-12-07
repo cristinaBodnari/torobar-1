@@ -39,7 +39,7 @@ VALUES (1,'Cava Brut, Ana Ferret','gl. 55/255','','Penedes DO, Spanien  Frisk,t�
 
 (4, 'Merlot, Louis Eschenauer','gl. 55/225','','dOc Vdp, Frankrig Blød, let tilgængelig, frugtig'),
 (4, 'Zinfandel, 770 Miles','gl. 65/275','', 'California, USA Frugtig halvtør, medium kraftig'),
-(4, 'Piot Noir, Chartron et Trebuchet', 'Rødvin','gl. 75/345','', 'Bourgogne,AOC, Frankrig  Elegant, karakterfuld, silkeblød'),
+(4, 'Piot Noir, Chartron et Trebuchet','gl. 75/345','', 'Bourgogne,AOC, Frankrig  Elegant, karakterfuld, silkeblød'),
 
 (5,'Coca-Cola ','30 kr.', '', ''),
 (5,'Sprite','30 kr.', '', ''),
@@ -47,7 +47,7 @@ VALUES (1,'Cava Brut, Ana Ferret','gl. 55/255','','Penedes DO, Spanien  Frisk,t�
 (5,'Schweppes','30 kr.', '', ''),
 (5,'Ramlösa Original Premium','33cl/20kr. 80cl/45kr.', '', ''),
 
-(6,'Calsberg Pilsner''50 cl/45 kr.', '', 'Carlsberg Pilsner er blevet en del af den danske kulturarv. Oplev den harmoniske balance mellem bitterhed og sødmefulde æbler. mens du nyder den lyse, gyldne farve med flot skum og duften af fyrretræ, strå og hasselnød- det er næsten som duften af Danmark- 4,6%'),
+(6,'Calsberg Pilsner', '50 cl/45 kr.', '', 'Carlsberg Pilsner er blevet en del af den danske kulturarv. Oplev den harmoniske balance mellem bitterhed og sødmefulde æbler. mens du nyder den lyse, gyldne farve med flot skum og duften af fyrretræ, strå og hasselnød- det er næsten som duften af Danmark- 4,6%'),
 (6,'Tuborg Classic','25cl/28kr. 50cl/45kr.', '', ' Donmarks forste Classic ol, som blev introduceret ved Tuborgs 120-ars jubilceum i 1993. En mørkere pilsnerøl med en behagelig ristet smag og let sødme. 1 glosset fremstår Tuborg Clossic lys brunlig med et flot elfenbensfarvet skum, og duften er frisk-4,6 %'),
 (6,'Jacobsen Yakima IPA','20cl/35kr 50cl/49kr.' , '','Yakima IPA er til dig der værdsætter en stor aromatisk bitterhed med en forfriskende fylde. Den har en frisk fylde med et godt snerpende bid of humle med en god lang efterbitterhed Duften er eksotisk og let syrlig af tropiske frugter -6,5 %'),
 (6,'Jacobsen Brown Ale','25cl/35kr. 50cl/49 kr.', '','Jacobsen Brown Ale er brugget med den engelske brown ale-stil som forbillede. Brown Ale har en frugtig karakter. Smagen er kompleks og med spændende ristede noter, og den smukke, dybe brune forve minder om mahogni. Duften minder om Sauvignon Blanc-druen- 6,0%'),
@@ -66,10 +66,10 @@ VALUES (1,'Cava Brut, Ana Ferret','gl. 55/255','','Penedes DO, Spanien  Frisk,t�
 
 DROP TABLE IF EXISTS drink_of_the_month;
 CREATE TABLE drink_of_the_month(
-    id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    beer_id INT(5) NOT NULL,
     date VARCHAR(12),
-    FOREIGN KEY categories(Beer) REFERENCES Beer(id)
-
+    FOREIGN KEY drink_of_the_month(beer_id) REFERENCES items(id)
 );
 
 DROP TABLE IF EXISTS events;
