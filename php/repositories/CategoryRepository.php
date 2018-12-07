@@ -3,7 +3,7 @@
         public static function get($id){
             global $database;
 
-            $query = printf("SELECT * FROM categories WHERE id=%d", $id);
+            $query = sprintf("SELECT * FROM categories WHERE id=%d", $id);
 
             $result = mysqli_query($database, $query);
 
@@ -24,7 +24,7 @@
             
             $arr = array();
 
-            $query = printf("SELECT * FROM categories");
+            $query = sprintf("SELECT * FROM categories");
 
             $result = mysqli_query($database, $query);
 
