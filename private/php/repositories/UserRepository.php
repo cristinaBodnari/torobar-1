@@ -5,7 +5,7 @@
             if(gettype($username) == "string"){
                 global $database;
 
-                $query = sprintf("SELECT * FROM users WHERE username=%s LIMIT 1", $username);
+                $query = "SELECT * FROM users WHERE username='" . $username . "' LIMIT 1";
 
                 $result = mysqli_query($database, $query);
 

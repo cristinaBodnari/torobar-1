@@ -12,20 +12,20 @@
             $user = UserRepository::getUser($username);
 
             if($user != null){
-                if(password_verify($password, "$2y$12$8zy41Cyejk0UIG2aQBSp4ukKaksoxJsK4UhePoRqx8IWN2U0MYNGm")){
+                if(password_verify($password, $user->getPassword())){
                     session_start();
 
-                    $_SESSION['user'] = user;
+                    $_SESSION['user'] = $user;
                     echo "verified";
                 }
             } else {
-                echo "<br/>Cant authorize";
+                // echo "Cant authorize";
                 // add redirect
             }
 
             
         } else {
-            echo "BAD REQUEST";
+            echo "  BAD REQUEST";
         }
     } else {
         echo password_hash("password", PASSWORD_BCRYPT, ["cost" => 12]);

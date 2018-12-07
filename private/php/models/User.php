@@ -8,13 +8,13 @@
         function User($obj){
             if(gettype($obj) == "array"){
                 if(array_key_exists("id", $obj)){
-                    $this->id = $id;
+                    $this->id = $obj['id'];
                 }
                 if(array_key_exists("username", $obj)){
-                    $this->username = $username;
+                    $this->username = $obj['username'];
                 }
                 if(array_key_exists("password", $obj)){
-                    $this->password = $password;
+                    $this->password = $obj['password'];
                 }
             }
         }
