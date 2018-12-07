@@ -1,6 +1,9 @@
 <?php
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Gallery";
+  require_once("shared/header.php");
+
+  require_once("php/database/connect.php");
 
   require_once("php/models/Category.php");
   require_once("php/repositories/CategoryRepository.php");
