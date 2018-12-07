@@ -1,6 +1,23 @@
 <?php
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Gallery";
+
+  require_once("php/models/Category.php");
+  require_once("php/repositories/CategoryRepository.php");
+  require_once("php/models/Item.php");
+  require_once("php/repositories/ItemRepository.php");
+
+  $categories = CategoryRepository::getAll();
+
+  if($categories == null){
+    
+  } else {
+    for($i=0; $i < count($categories); $i++){
+      $items = ItemRepository::getCategoryItems($categories[$i]->id);
+  
+      $categories[$i]->setItems($items);
+    }
+  }
 ?>
    
 <!DOCTYPE html>
@@ -42,88 +59,43 @@
     <!-- /jumbotron -->  
     <div class="container pt-4"> <!-- /open container --> 
         <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            
-            <div class="card-body">
-             <h4 class="card-title">BEERS</h4>
-                 <table>
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr >
-                        <td >xxxxxxxx</td>
-                        <td >0000000</td>
-                        
-                    </tr>
-                    </tbody>
-
-                    </tr>
-                </table>
-
-           </div>
-          </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            
-            <div class="card-body">
-             <h4 class="card-title">COCKTAILS</h4>
-                  
+        <?php if($categories != null) { ?>
+          <?php foreach($categories as $category) {?>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+              
+              <div class="card-body">
+              <h4 class="card-title"><?php echo $category->name?></h4>
                   <table>
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Price</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr >
-                            <td >xxxxxxxx</td>
-                            <td >0000000</td>
-                            
-                        </tr>
-                        </tbody>
+                      <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Price</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <?php foreach($category->items as $item) {?>
+                          <tr >
+                              <td ><?php echo $item->title; ?></td>
+                              <td ><?php echo $item->price; ?></td>
+                          </tr>
+                        <?php } ?>
+                      </tbody>
 
-                        </tr>
-                </table>
+                      </tr>
+                  </table>
 
-           </div>
+              </div>
+              </div>
+            </div>
+          <?php } ?>
+        <?php } else { ?>
+                          
+          <div class="col-md-6 col-lg-4">
+            No items added
           </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            
-            <div class="card-body">
-             <h4 class="card-title">WINE</h4>
 
-                         <table>
-                              <thead>
-                              <tr>
-                                  <th>Name</th>
-                                  <th>Price</th>
-                              </tr>
-                              </thead>
-                              <tbody>
-                              <tr >
-                                  <td >xxxxxxxx</td>
-                                  <td >0000000</td>
-                                  
-                              </tr>
-                              </tbody>
-
-                              </tr>
-                       </table>
-             
-           </div>
-          </div>
-        </div>
+        <?php } ?>
       </div>
 
     </div>     <!-- /close container -->  

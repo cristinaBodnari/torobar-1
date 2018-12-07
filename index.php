@@ -8,7 +8,7 @@
   require_once("php/repositories/ItemRepository.php");
 
   $nearest_event = EventRepository::getNearest();
-  
+
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +73,7 @@
             <div class="card-body">
              <h4 class="card-title">There are no upcoming events</h4>
              <p class="card-text">Events will be displayed.</p>
-             <a href="menu.php" class="btn btn-primary">See all Drinksss</a>
+             <a href="menu.php" class="btn btn-primary">See all Drinks</a>
            </div>
           </div>
         </div>
