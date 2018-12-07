@@ -61,3 +61,7 @@
    </div> 
   </body>
 </html>    
+
+<?php 
+  require_once("shared/footer.php");
+?>

@@ -16,7 +16,6 @@
   </head>
   <body>
     
-  <!-- gg 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
      <div class="container">
       <a class="navbar-brand order-1 mr-0" href="#http://wwww.torobar.com/home" target="_blank">ToroBar</a>
@@ -38,7 +37,6 @@
   </body>  
 </html>  
 
--->
 
 
 
