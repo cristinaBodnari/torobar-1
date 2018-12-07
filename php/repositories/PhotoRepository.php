@@ -37,6 +37,26 @@
             return $photos;
         }
 
+        public static function getLatest(){
+            global $database;
+
+            $query = sprintf("SELECT * FROM photos ORDER BY id DESC LIMIT 15");
+
+            $result = mysqli_query($database, $query);
+
+            if(!$result || $result->num_rows == 0){
+                return null;
+            }
+
+            $photos = array();
+
+            while($item = mysqli_fetch_assoc($result)){
+                array_push($photos, new Photo(array('id' => $assoc['id'], 'url' => $assoc['url'], 'album' => $assoc['album'])));
+            }
+            
+            return $photos;
+        }
+
         public static function update($obj){
             if(gettype($obj) == "object"){
                 if(get_class($obj) == "Photo"){

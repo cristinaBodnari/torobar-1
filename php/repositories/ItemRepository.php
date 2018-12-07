@@ -109,6 +109,10 @@
                 return null;
             }
         }
+
+        public static function getDrinkOfTheMonth(){
+            
+        }
     }
 
 
