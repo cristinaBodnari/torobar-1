@@ -1,4 +1,16 @@
  
-/** navbar header***/
+/** background image***/
+.bg {
+  /* The image used */
+  background-image: url("images/woodPlatesinBar.jpg") !important;
+
+  /* Half height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
  
-/** navbar header end***/
+/*** end ***/

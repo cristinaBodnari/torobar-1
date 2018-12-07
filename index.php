@@ -18,19 +18,22 @@
   </head>
   <body>
    <!-- jumbotron -->
-   <div class="jumbotron jumbotron-fluid bg-info text-white">
-      <div class="container text-center pt-5 ">
-        <h1 class="display-2 m-3">ToroBar</h1>
-         <div class="btn-group" role="group" aria-label="Basic example">
-          <nav class="nav nav-pills nav-justified navbar-expand-sm">
-            <a class="button btn-light btn-lg m-2" href="about.php">About</a>
-            <a class="button btn-light btn-lg m-2" href="menu.php">Menu</a>
-            <a class="button btn-light btn-lg m-2" href="events.php">Events</a>
-            <a class="button btn-light btn-lg m-2" href="gallery.php">Gallery</a>
-          </nav>
-         </div> 
-      </div>
-    </div>  
+    <div class="bg" style="background-image: url("woodPlatesinBar.jpg");">
+       <div class="jumbotron jumbotron-fluid bg-info text-white">
+          <div class="container text-center pt-5 ">
+            <h1 class="display-2 m-3">ToroBar</h1>
+              <!-- <img src="images/woodPlatesinBar.jpg" alt="toro"> -->
+             <div class="btn-group" role="group" aria-label="Basic example">
+              <nav class="nav nav-pills nav-justified navbar-expand-sm">
+                <a class="button btn-light btn-lg m-2" href="about.php">About</a>
+                <a class="button btn-light btn-lg m-2" href="menu.php">Menu</a>
+                <a class="button btn-light btn-lg m-2" href="events.php">Events</a>
+                <a class="button btn-light btn-lg m-2" href="gallery.php">Gallery</a>
+              </nav>
+             </div> 
+          </div>
+        </div>  
+    </div>
   <!-- /jumbotron -->   
     
     <div class="container pt-4"> <!-- content with fixed width -->
@@ -50,12 +53,14 @@
       <?php } else { ?>
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <img class="card-img-top" src="images/gløgg.jpg" alt="gløgg">
             <div class="card-body">
              <h4 class="card-title">This Month's Drink Specials</h4>
              <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
              Aenean commodo ligula eget dolor.</p>
              <a href="/menu" class="btn btn-primary">See all Drinks</a>
+             <p class="card-text">Torobars hjemmelavet gløøg. 50kr,- per et glas. Kom og smag! Skål!</p>
+             <a href="#menu" class="btn btn-primary">See all Drinks</a>
            </div>
           </div>
         </div>
@@ -63,11 +68,10 @@
       
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <img class="card-img-top" src="images/boglancering.jpg" alt="fængslet">
             <div class="card-body">
              <h4 class="card-title">The Next Upcoming Events</h4>
-             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-             Aenean commodo ligula eget dolor. </p>
+             <p class="card-text">Vi har haft den fornøjelse at give tag til Deniz Serincis bogreception. </p>
              <a href="#menu" class="btn btn-primary">See all Drinks</a>
            </div>
           </div>
@@ -75,11 +79,10 @@
       
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <img class="card-img-top" src="images/skilt.jpg" alt="skilt">
             <div class="card-body">
              <h4 class="card-title">Happy Hour every Monday to Wednesday</h4>
-             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-             Aenean commodo ligula eget dolor.</p>
+             <p class="card-text"> Fra 12-20 har vi 20% rabat til alle vores drinks, øl og vin, derefter vores kaffe menu er kun 20kr,-.</p>
              <a href="#menu" class="btn btn-primary">See All Events</a>
            </div>
           </div>

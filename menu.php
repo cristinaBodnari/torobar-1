@@ -41,6 +41,91 @@
       </div>  
     <!-- /jumbotron -->  
     <div class="container pt-4"> <!-- /open container --> 
+        <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            
+            <div class="card-body">
+             <h4 class="card-title">BEERS</h4>
+                 <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr >
+                        <td >xxxxxxxx</td>
+                        <td >0000000</td>
+                        
+                    </tr>
+                    </tbody>
+
+                    </tr>
+                </table>
+
+           </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            
+            <div class="card-body">
+             <h4 class="card-title">COCKTAILS</h4>
+                  
+                  <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr >
+                            <td >xxxxxxxx</td>
+                            <td >0000000</td>
+                            
+                        </tr>
+                        </tbody>
+
+                        </tr>
+                </table>
+
+           </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            
+            <div class="card-body">
+             <h4 class="card-title">WINE</h4>
+
+                         <table>
+                              <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>Price</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr >
+                                  <td >xxxxxxxx</td>
+                                  <td >0000000</td>
+                                  
+                              </tr>
+                              </tbody>
+
+                              </tr>
+                       </table>
+             
+           </div>
+          </div>
+        </div>
+      </div>
+
     </div>     <!-- /close container -->  
 
   </body>
