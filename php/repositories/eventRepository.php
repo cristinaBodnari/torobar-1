@@ -114,11 +114,11 @@
             global $database;
 
             $date = date("Y-m-d");
-            $query = sprintf("SELECT * FROM events WHERE date>=%s ORDER BY date ASC LIMIT 1", $date);
+            $query = sprintf("SELECT * FROM events WHERE date>='%s' ORDER BY date ASC LIMIT 1", $date);
 
             $result = mysqli_query($database, $query);
 
-            if(!$result){
+            if(!$result || $result->num_rows == 0){
                 return null;
             }
 
