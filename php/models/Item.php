@@ -7,7 +7,6 @@
         // Items have to be public in order to work with menu
         public $id;
         public $name;
-        public $nameDK;
         public $price;
         public $description;
         public $descriptionDK;
@@ -26,11 +25,7 @@
                             $this->name = $obj["name"];
                         }
                     }
-                    if(array_key_exists("nameDK", $obj)){
-                        if(gettype($obj["nameDK"]) == "string"){
-                            $this->nameDK = $obj["nameDK"];
-                        }
-                    }
+                 
                     if(array_key_exists("price", $obj)){
                         if(gettype($obj["price"]) == "string"){
                             $price = intval($obj["price"]);

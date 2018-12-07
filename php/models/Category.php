@@ -16,10 +16,6 @@
                         $this->name = $obj['name'];
                     if(array_key_exists("nameDK", $obj))
                         $this->nameDK = $obj['nameDK'];
-                    if(array_key_exists("description", $obj))
-                        $this->description = $obj['description'];
-                    if(array_key_exists("descriptionDK", $obj))
-                        $this->descriptionDK = $obj['descriptionDK'];
                     if(array_key_exists("items", $obj))
                         $this->items = $obj['items'];
                 }

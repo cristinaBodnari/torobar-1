@@ -1,7 +1,6 @@
 <?php
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Index";
-  require_once("shared/header.php");
   require_once("php/models/Event.php");
   require_once("php/repositories/eventRepository.php");
   require_once("php/models/Item.php");
@@ -19,14 +18,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css"/>
   </head>
   <body>
+    <style>  .JumbotronHeaderImg{
+  background-image: url("images/woodPlatesinBar.jpg");
+  background-size: cover;
+ }</style>
    <!-- jumbotron -->
-    <div class="bg">
-       <div class="jumbotron jumbotron-fluid bg-info text-black">
+ 
+      
+       <div class="jumbotron jumbotron-fluid text-white JumbotronHeaderImg">
           <div class="container text-center pt-5 ">
-            <h1 class="display-2 m-3">ToroBar</h1>
+            <h1 class="m-3">ToroBar</h1>
               <!-- <img src="images/woodPlatesinBar.jpg" alt="toro"> -->
              <div class="btn-group" role="group" aria-label="Basic example">
               <nav class="nav nav-pills nav-justified navbar-expand-sm">
@@ -38,7 +42,7 @@
              </div> 
           </div>
         </div>  
-    </div>
+    
   <!-- /jumbotron -->   
     
     <div class="container pt-4"> <!-- content with fixed width -->
