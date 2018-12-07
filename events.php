@@ -2,6 +2,11 @@
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Event";
   require_once("shared/header.php");
+
+  require_once("php/models/Event.php");
+  require_once("php/repositories/eventRepository.php");
+
+  $events = eventRepository::getNearestEvents();
 ?>
 <!DOCTYPE html>
  <html lang="en">
@@ -43,67 +48,31 @@
   
   <!-- Gallery -->
   <div class="container pt-4"> <!-- /open container --> 
-  <h1 class="display-4 text-center my-5 text-muted">Speakers</h1>
+    <h1 class="display-4 text-center my-5 text-muted">Speakers</h1>
       <div class="row">
-        <div class="col-md-6 col-lg-4">
+        <?php if($events != null) {?>
+          <?php foreach($events as $event) {?>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card mb-3">
+                <img class="card-img-top" src="<?php echo $event->imageURL?>" alt="Vivianne">
+                <div class="card-body">
+                <h4 class="card-title"><?php echo $event->title?></h4>
+                <p class="card-text"><?php echo $event->date?></p>
+              </div>
+              </div>
+          <?php } ?>
+        <?php } else { ?>
+          <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4">
           <div class="card mb-3">
             <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
             <div class="card-body">
-             <h4 class="card-title">Event</h4>
-             <p class="card-text">jjjj</p>
+             <h4 class="card-title">No upcoming events</h4>
+             <p class="card-text">The events will be added here</p>
            </div>
-          </div>
         </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
-            <div class="card-body">
-             <h4 class="card-title">Event</h4>
-             <p class="card-text">jjjj</p>
-           </div>
-          </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
-            <div class="card-body">
-             <h4 class="card-title">Event</h4>
-             <p class="card-text">jjjj</p>
-           </div>
-          </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
-            <div class="card-body">
-             <h4 class="card-title">Event</h4>
-             <p class="card-text">jjjj</p>
-           </div>
-          </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
-            <div class="card-body">
-             <h4 class="card-title">Event</h4>
-             <p class="card-text">jjjj</p>
-           </div>
-          </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
-            <div class="card-body">
-             <h4 class="card-title">Event</h4>
-             <p class="card-text">jjjj</p>
-           </div>
-          </div>
-        </div>
+        <?php } ?>
+
       </div>   
      <!-- /Gallery --> 
     </div>     <!-- /close container -->    

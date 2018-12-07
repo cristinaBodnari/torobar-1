@@ -2,9 +2,13 @@
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Index";
   require_once("shared/header.php");
-  require("php/repositories/eventRepository.php");
+  require_once("php/models/Event.php");
+  require_once("php/repositories/eventRepository.php");
+  require_once("php/models/Item.php");
+  require_once("php/repositories/ItemRepository.php");
 
   $nearest_event = EventRepository::getNearest();
+
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +47,7 @@
 
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="images/boglancering.jpg" alt="fængslet">
+            <img class="card-img-top" src="images/gløgg.jpg" alt="fængslet">
             <div class="card-body">
              <h4 class="card-title">The Next Upcoming Events</h4>
              <p class="card-text">Vi har haft den fornøjelse at give tag til Deniz Serincis bogreception. </p>
@@ -55,7 +59,7 @@
         <?php if($nearest_event != null){?>
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <img class="card-img-top" src="<?php echo $nearest_event->imageURL?>" alt="Vivianne">
             <div class="card-body">
              <h4 class="card-title"><?php echo $nearest_event->title?></h4>
              <p class="card-text"><?php echo $nearest_event->description?></p>
@@ -66,14 +70,11 @@
       <?php } else { ?>
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="images/gløgg.jpg" alt="gløgg">
+            <img class="card-img-top" src="images/boglancering.jpg"  alt="gløgg">
             <div class="card-body">
-             <h4 class="card-title">This Month's Drink Specials</h4>
-             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-             Aenean commodo ligula eget dolor.</p>
-             <a href="/menu" class="btn btn-primary">See all Drinks</a>
-             <p class="card-text">Torobars hjemmelavet gløøg. 50kr,- per et glas. Kom og smag! Skål!</p>
-             <a href="#menu" class="btn btn-primary">See all Drinks</a>
+             <h4 class="card-title">There are no upcoming events</h4>
+             <p class="card-text">Events will be displayed.</p>
+             <a href="menu.php" class="btn btn-primary">See all Drinks</a>
            </div>
           </div>
         </div>
