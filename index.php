@@ -39,6 +39,18 @@
     <div class="container pt-4"> <!-- content with fixed width -->
       <!-- Monthly Specials -->
      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3">
+            <img class="card-img-top" src="images/boglancering.jpg" alt="fængslet">
+            <div class="card-body">
+             <h4 class="card-title">The Next Upcoming Events</h4>
+             <p class="card-text">Vi har haft den fornøjelse at give tag til Deniz Serincis bogreception. </p>
+             <a href="#menu" class="btn btn-primary">See all Drinks</a>
+           </div>
+          </div>
+        </div>
+
         <?php if($nearest_event != null){?>
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
@@ -65,17 +77,6 @@
           </div>
         </div>
       <?php } ?>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="images/boglancering.jpg" alt="fængslet">
-            <div class="card-body">
-             <h4 class="card-title">The Next Upcoming Events</h4>
-             <p class="card-text">Vi har haft den fornøjelse at give tag til Deniz Serincis bogreception. </p>
-             <a href="#menu" class="btn btn-primary">See all Drinks</a>
-           </div>
-          </div>
-        </div>
       
         <div class="col-md-6 col-lg-4">
           <div class="card mb-3">
