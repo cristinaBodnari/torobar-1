@@ -1,3 +1,15 @@
+<?php
+  // put your title for the page here, otherwise it's gonna be the default "TOROS"
+  $title = "Login";
+  /*require_once("php/models/Event.php");
+  require_once("php/repositories/eventRepository.php");
+  require_once("php/models/Item.php");
+  require_once("php/repositories/ItemRepository.php");
+*/
+  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
