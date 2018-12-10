@@ -119,7 +119,7 @@
             $result = mysqli_query($database, $query);
 
             if(!$result || $result->num_rows == 0){
-                return null;
+              return null;
             }
 
             $assoc = mysqli_fetch_assoc($result);
