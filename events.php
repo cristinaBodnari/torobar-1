@@ -46,7 +46,7 @@
         <?php } else { ?>
           <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="img/vivianne.png" alt="Vivianne">
+            <img class="card-img-top" src="images/piano.jpg" alt="Open Mic">
             <div class="card-body">
              <h4 class="card-title">No upcoming events</h4>
              <p class="card-text">The events will be added here</p>
