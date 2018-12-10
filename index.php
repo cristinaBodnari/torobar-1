@@ -23,9 +23,9 @@
     <style>  .JumbotronHeaderImg{
   /*background-image: url("images/woodPlatesinBar.jpg");
   background-size: cover;*/
-  background-color: black;
+  background-color: darkgreen;
  }</style>
- 
+
        <div class="jumbotron jumbotron-fluid text-white JumbotronHeaderImg">
           <div class="container text-center pt-5 ">
             <h1 class="display-2 m-3">ToroBar</h1>
@@ -46,50 +46,60 @@
     <div class="container pt-4"> <!-- content with fixed width -->
       <!-- Monthly Specials -->
      <div class="row">
-
+      
         <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="images/gløgg.jpg" alt="fængslet">
+          <div class="card mb-3 text-white" style="background-color: black">
+            <img class="card-img-top" src="images/gløgg.jpg" alt="fængslet" height="260" width="180">
             <div class="card-body">
-             <h4 class="card-title">The Drink of the Month: "Gløgg"</h4>
+             <h4 class="card-title">Drinks Specials</h4>
 
+<<<<<<< HEAD
              <p class="card-text">Vores hjemmelavet gløgg er kun 50,- per glas. Kom og smag! Skål!</p>
              <a href="#menu" class="btn btn-primary">See all drinks</a>
+=======
+             <p class="card-text">"Gløgg"! Vores hjemmelavet gløgg er kun 50,- per glas.</p>
+             <a href="#menu" class="btn btn-light">See all events</a>
+>>>>>>> 19bdc6969f954ae72e6bc7f16dcf142fca2a33f2
            </div>
           </div>
         </div>
 
         <?php if($nearest_event != null){?>
         <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="<?php echo $nearest_event->imageURL?>" alt="Vivianne">
+        <div class="card mb-3 text-white" style="background-color: black">
+            <img class="card-img-top" src="<?php echo $nearest_event->imageURL?>" alt="Vivianne" height="260" width="180">
             <div class="card-body">
              <h4 class="card-title"><?php echo $nearest_event->title?></h4>
              <p class="card-text"><?php echo $nearest_event->description?></p>
+<<<<<<< HEAD
              <a href="/menu" class="btn btn-primary">See all events</a>
+=======
+             <a href="/menu" class="btn btn-light">See all Drinks</a>
+>>>>>>> 19bdc6969f954ae72e6bc7f16dcf142fca2a33f2
            </div>
           </div>
         </div>
+
       <?php } else { ?>
         <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="images/boglancering.jpg"  alt="gløgg">
+          <div class="card mb-3 text-white" style="background-color: black">
+            <img class="card-img-top" src="images/boglancering.jpg"  alt="gløgg"  height="260" width="180">
             <div class="card-body">
-             <h4 class="card-title">There are no upcoming events</h4>
-             <p class="card-text">Events will be displayed.</p>
-             <a href="menu.php" class="btn btn-primary">See all Drinks</a>
+             <h4 class="card-title">Upcoming events</h4>
+             <p class="card-text">Events will be displayed. Events will be displayed. Events will be displayed. </p>
+             <a href="menu.php" class="btn btn-light">See all Events</a>
            </div>
           </div>
         </div>
       <?php } ?>
       
         <div class="col-md-6 col-lg-4">
-          <div class="card mb-3">
-            <img class="card-img-top" src="images/skilt.jpg" alt="skilt">
+          <div class="card mb-3 text-white" style="background-color: black">
+            <img class="card-img-top" src="images/skilt.jpg" alt="skilt" height="260" width="180">
             <div class="card-body">
-             <h4 class="card-title">Happy Hour every Monday to Wednesday</h4>
-             <p class="card-text"> Fra 12-20 har vi 20% rabat til alle vores drinks, øl og vin, derefter vores kaffe menu er kun 20kr,-.</p>
-             <a href="#menu" class="btn btn-primary">See All Events</a>
+             <h4 class="card-title">Happy Hour</h4>
+             <p class="card-text"> Fra 12-20 har vi 20% rabat til alle vores drinks, øl og vin.</p>
+             <a href="#menu" class="btn btn-light">See All Drinks</a>
            </div>
           </div>
         </div>
