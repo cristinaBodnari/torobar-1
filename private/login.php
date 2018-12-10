@@ -31,7 +31,7 @@
    }
    </style> 
 
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #000000;">
+    <nav class="navbar navbar-expand-lg fixed-top JumbotronHeaderImg" style="background-color: #000000;">
      <div class="container">
       <a class="navbar-brand order-1 mr-0" style="color: #ffffff" href="#" target="_blank">ToroBar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,11 +39,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" style="color: #ffffff" href="index.php">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" style="color: #ffffff" href="about.php">About</a>
-          <a class="nav-item nav-link" style="color: #ffffff" href="menu.php">Menu</a>
-          <a class="nav-item nav-link" style="color: #ffffff" href="events.php">Events</a>
-          <a class="nav-item nav-link" style="color: #ffffff" href="gallery.php">Gallery</a>
+          <a class="nav-item nav-link" style="color: #ffffff" href="../index.php">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" style="color: #ffffff" href="../about.php">About</a>
+          <a class="nav-item nav-link" style="color: #ffffff" href="../menu.php">Menu</a>
+          <a class="nav-item nav-link" style="color: #ffffff" href="../events.php">Events</a>
+          <a class="nav-item nav-link" style="color: #ffffff" href="../gallery.php">Gallery</a>
         </div>
        </div>
       </div> 
