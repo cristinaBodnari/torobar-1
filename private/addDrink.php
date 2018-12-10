@@ -2,21 +2,38 @@
 <html lang="en">
 <head>
     <title>Add drink</title>
-   <style>
-       body{
-    margin:0;
-    font-family: Montserrat, sans-serif;
-    color: white;
-    background-color: black;
-    opacity: 80;
+  <link rel="stylesheet" href="../styles/private.css"/>
 
-}
+  <style>
 
-.container{
-    display: center;
-}
+            h1 { 
+            font-family: Papyrus, fantasy; 
+            font-size: 300%; 
+            font-style: normal; 
+            font-variant: normal; 
+            font-weight: bold; 
+            line-height: 200%; 
+            
+            } 
 
-   </style>
+            .container {
+              margin: auto;
+              width: 50%;
+              border: 3px solid green;
+              padding: 10px;
+            }
+
+            body{
+                margin:10%;
+                font-family: Montserrat, sans-serif;
+                color: white;
+                background-color: black;
+                opacity: 80;
+                text-align: center;
+            }
+
+  </style>
+  
 </head>
 
 
@@ -24,7 +41,10 @@
 
 <div class="container">
 
+    <h1>TOROBAR</h1>
+
     <h1>Add an item</h1>
+
 
     <form action="" method="post" >
 

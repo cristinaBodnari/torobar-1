@@ -21,13 +21,14 @@
   <body>
   <!-- jumbotron -->
     <style>  .JumbotronHeaderImg{
-  background-image: url("images/woodPlatesinBar.jpg");
-  background-size: cover;
+  /*background-image: url("images/woodPlatesinBar.jpg");
+  background-size: cover;*/
+  background-color: black;
  }</style>
  
        <div class="jumbotron jumbotron-fluid text-white JumbotronHeaderImg">
           <div class="container text-center pt-5 ">
-            <h1 class="m-3">ToroBar</h1>
+            <h1 class="display-2 m-3">ToroBar</h1>
               <!-- <img src="images/woodPlatesinBar.jpg" alt="toro"> -->
              <div class="btn-group" role="group" aria-label="Basic example">
               <nav class="nav nav-pills nav-justified navbar-expand-sm">
@@ -53,7 +54,7 @@
              <h4 class="card-title">The Drink of the Month: "Gløgg"</h4>
 
              <p class="card-text">Vores hjemmelavet gløgg er kun 50,- per glas. Kom og smag! Skål!</p>
-             <a href="#menu" class="btn btn-primary">See all events</a>
+             <a href="#menu" class="btn btn-primary">See all drinks</a>
            </div>
           </div>
         </div>
@@ -65,7 +66,7 @@
             <div class="card-body">
              <h4 class="card-title"><?php echo $nearest_event->title?></h4>
              <p class="card-text"><?php echo $nearest_event->description?></p>
-             <a href="/menu" class="btn btn-primary">See all Drinks</a>
+             <a href="/menu" class="btn btn-primary">See all events</a>
            </div>
           </div>
         </div>
