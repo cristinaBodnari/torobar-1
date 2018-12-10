@@ -51,13 +51,13 @@
   
   <!-- Login Form -->
    <div class="container pt-4"> 
-      <form action="action_page.php">
+      <form action="php/logon.php" method="post">
         <div class="container">
           <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
           <button type="submit">Login</button>
           <label>
@@ -70,10 +70,8 @@
           <span class="psw">Forgot<a href="#"> password?</a></span>
         </div>  
       </form>
-   </div> 
-  </body>
-</html>    
+   </div>     
 
 <?php 
-  require_once("shared/footer.php");
+  require_once("../shared/footer.php");
 ?>
