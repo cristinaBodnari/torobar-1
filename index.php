@@ -5,9 +5,7 @@
   require_once("php/repositories/eventRepository.php");
   require_once("php/models/Item.php");
   require_once("php/repositories/ItemRepository.php");
-
   $nearest_event = EventRepository::getNearest();
-
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +19,12 @@
     <link rel="stylesheet" href="styles/style.css"/>
   </head>
   <body>
+  <!-- jumbotron -->
     <style>  .JumbotronHeaderImg{
   background-image: url("images/woodPlatesinBar.jpg");
   background-size: cover;
  }</style>
-   <!-- jumbotron -->
  
-      
        <div class="jumbotron jumbotron-fluid text-white JumbotronHeaderImg">
           <div class="container text-center pt-5 ">
             <h1 class="m-3">ToroBar</h1>
@@ -105,9 +102,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
 </html>
-    
-
-
-<?php 
-  require_once("footer.php");
-?>
