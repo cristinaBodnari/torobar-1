@@ -37,7 +37,6 @@
     </nav>
 
     <!-- jumbotron -->
-        <!-- jumbotron -->
         <div class="jumbotron jumbotron-fluid text-white JumbotronHeaderImg">
         <div class="container text-center pt-5 ">
           <h1 class="display-2 m-3">Admin Pages</h1>
