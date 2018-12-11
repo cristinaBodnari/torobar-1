@@ -66,7 +66,7 @@
         }
         public static function delete($obj){
             if($obj != null){
-                if(gettype($obj) == "integer"){
+                if(gettype($obj) == "integer" || gettype($obj) == "string"){
                     global $database;
                     $query = sprintf("DELETE FROM items WHERE id=%d", $obj);
                     if(mysqli_query($database, $query)){

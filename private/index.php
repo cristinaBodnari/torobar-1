@@ -59,9 +59,9 @@
                                 <th scope="col">Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="table-body">
                             <?php foreach($categories as $category) {?>
-                                <tr>
+                                <tr class="category-row" id="category-row-<?php echo $category->id; ?>">
                                     <th scope="row"><?php echo $category->id; ?></th>
                                     <td><?php echo $category->name; ?> (<?php echo $category->nameDK; ?>)</td>
                                     <td><?php echo count($category->items); ?></td>
@@ -91,20 +91,20 @@
             <div class="modal-body">
                 <form method="post" action="#">
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter a category name">
+                    <label for="name-new-category">Name</label>
+                    <input type="text" class="form-control" id="name-new-category" aria-describedby="nameHelp" placeholder="Enter a category name">
                     <small id="nameHelp" class="form-text text-muted">This name will appear in english website.</small>
                 </div>
                 <div class="form-group">
-                    <label for="nameDK">Navn</label>
-                    <input type="text" class="form-control" id="nameDK" aria-describedby="nameHelpDK" placeholder="Enter a category name">
+                    <label for="nameDK-new-category">Navn</label>
+                    <input type="text" class="form-control" id="nameDK-new-category" aria-describedby="nameHelpDK" placeholder="Enter a category name">
                     <small id="nameHelpDK" class="form-text text-muted">This name will appear in danish website.</small>
                 </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary" id="new-category-save-btn">Save</button>
             </div>
             </div>
         </div>
