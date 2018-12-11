@@ -15,19 +15,18 @@
                 if(password_verify($password, $user->getPassword())){
                     session_start();
 
-                    $_SESSION['user'] = $user;
-                    echo "verified";
+                    $_SESSION['user'] = $user->getUsername();
+                    header("Location: ../index.php");
                 }
+                header("Location:../login.php");
             } else {
-                // echo "Cant authorize";
-                // add redirect
+                header("Location:../login.php");
             }
 
             
         } else {
-            echo "  BAD REQUEST";
+            echo "BAD REQUEST";
         }
     } else {
-        echo password_hash("password", PASSWORD_BCRYPT, ["cost" => 12]);
         echo "WRONG REQ METHOD";
     }

@@ -13,10 +13,7 @@
             
             $assoc = mysqli_fetch_assoc($result);
 
-            return new Category(array('id' => $assoc['id'], 'name' => $assoc['name']));
-
-            return new Category(array('id' => $assoc['id'], 'nameDk' => $assoc['nameDk']));
-
+            return new Category(array('id' => $assoc['id'], 'name' => $assoc['name'], 'nameDK' => $assoc['nameDK']));
         }
 
         public static function getAll(){
@@ -36,5 +33,13 @@
                 array_push($arr, new Category(array('id'=>$assoc['id'], 'name' => $assoc['name'], 'nameDK' => $assoc["nameDK"])));
             }
             return $arr;
+        }
+
+        public static function remove($id){
+            global $database;
+
+            $query = sprintf("DELETE FROM categories WHERE id=%d", $id);
+
+            return mysqli_query($database, $query);
         }
     }

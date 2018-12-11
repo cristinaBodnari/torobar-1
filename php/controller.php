@@ -18,13 +18,42 @@
                 require_once("repositories/ItemRepository.php");
                 echo (json_encode(ItemRepository::getAll()));
                 return;
-            } else if($_POST['target'] == 'category'){
-                if(isset($_POST['id'])){
-                    require_once("models/Category.php");
-                    require_once("repositories/CategoryRepository.php");
-                    echo (json_encode(CategoryRepository::get($id)));
+            } else if($_POST['target'] == 'addItem'){
+                require_once("models/Item.php");
+                require_once("repositories/ItemRepository.php");
+                
+                if(isset($_POST['name']) && isset($_POST['price']) && isset($_POST['categoryID'])){
+                    $item = new Item(array("name" => $_POST['name'], "price" => $_POST['price'], "category" => $_POST['categoryID']));
+                    if(ItemRepository::insert($item)){
+                        $item = ItemRepository::getLastInserted();
+                        echo (json_encode($item));
+                        return;
+                    }
+                    $message = new Response(array("message" => "Cannot insert the item."));
+                    echo (json_encode($message->expose()));
                     return;
                 }
+                $message = new Response(array("message" => "Bad request"));
+                echo (json_encode($message->expose()));
+                return;
+            }else if($_POST['target'] == 'category'){
+                if(isset($_POST['id'])){
+                    require_once("models/Category.php");
+                    require_once("models/Item.php");
+                    require_once("repositories/CategoryRepository.php");
+                    require_once("repositories/ItemRepository.php");
+                    $category = CategoryRepository::get($_POST['id']);
+                    $items = ItemRepository::getCategoryItems($category->id);
+                    $category->items = $items;
+                    echo (json_encode($category));
+                    return;
+                }
+            } else if($_POST['target'] == 'deleteCategory'){
+                if(isset($_POST['id'])){
+                    require_once("repositories/CategoryRepository.php");
+                    echo CategoryRepository::delete($_POST['id']);
+                }
+                return;
             } else if($_POST['target'] == "categories"){
                 require_once("models/Category.php");
                 require_once("repositories/CategoryRepository.php");
