@@ -7,30 +7,42 @@
         // Items have to be public in order to work with menu
         public $id;
         public $name;
+        public $nameDK;
         public $price;
+        public $category;
         public $description;
         public $descriptionDK;
 
         public function Item($obj = null){
             if(isset($obj)){
                 if(gettype($obj) == "array"){
-                    $id = intval($obj['id']);
                     if(array_key_exists("id", $obj)){
+                        $id = intval($obj['id']);
                         if($id != 0 || $id != null){
                             $this->id = $id;
                         }
                     }
+
                     if(array_key_exists("name", $obj)){
                         if(gettype($obj["name"]) == "string"){
                             $this->name = $obj["name"];
                         }
                     }
+
+                    if(array_key_exists("nameDK", $obj)){
+                        if(gettype($obj["nameDK"]) == "string"){
+                            $this->nameDK = $obj["nameDK"];
+                        }
+                    }
                  
                     if(array_key_exists("price", $obj)){
-                        if(gettype($obj["price"]) == "string"){
+                        // if(gettype($obj["price"]) == "string"){
                             // $price = intval($obj["price"]);
                             $this->price = $obj["price"];
-                        }
+                        // }
+                    }
+                    if(array_key_exists("category", $obj)){
+                        $this->category = $obj['category'];
                     }
                     if(array_key_exists("description", $obj)){
                         if(gettype($obj["description"]) == "string"){
@@ -68,6 +80,14 @@
 
         public function getPrice(){
             return $this->price;
+        }
+
+        public function setCategory($category){
+            $this->category = $category;
+        }
+
+        public function getCategory(){
+            return $this->category;
         }
 
         public function setDescription($description){

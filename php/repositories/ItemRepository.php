@@ -15,9 +15,7 @@
                 }
                 
                 $assoc = mysqli_fetch_assoc($result);
-                return new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'], 'description' => $assoc['description']));
-                return new Item(array('id' => $assoc['id'], 'nameDk' => $assoc['nameDk'],'price' => $assoc['price'], 'description' => $assoc['description']));
-
+                return new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'], 'category' => $assoc['category']));
             
             // }
             return null;
@@ -43,8 +41,8 @@
             // Returns false if connection failed and/or query was not successful
             if(get_class($item) == "Item"){
                 global $database;
-                $query = sprintf("INSERT INTO items (name, price, description) VALUES (%s, %s, %s)", $item->getName(), $item->getPrice(), $item->getDescription());
-                $query = sprintf("INSERT INTO items (name, price, descriptionDk) VALUES (%s, %s, %s)", $item->getName(), $item->getPrice(), $item->getDescriptionDk());
+                // $query = sprintf("INSERT INTO items (name, price, description, category) VALUES (%s, %s, %s, %s)", $item->getName(), $item->getPrice(), $item->getDescription());
+                $query = sprintf("INSERT INTO items (name, price, category) VALUES ('%s', '%s', '%s')", $item->name, $item->price, $item->category);
 
                 
                 if( mysqli_query($database, $query)){
@@ -68,7 +66,7 @@
         }
         public static function delete($obj){
             if($obj != null){
-                if(gettype($obj) == "integer"){
+                if(gettype($obj) == "integer" || gettype($obj) == "string"){
                     global $database;
                     $query = sprintf("DELETE FROM items WHERE id=%d", $obj);
                     if(mysqli_query($database, $query)){
@@ -89,6 +87,23 @@
             }
             
         }
+
+        public function getLastInserted(){
+            global $database;
+
+            $query = "SELECT * FROM items ORDER BY id DESC LIMIT 1";
+
+            $result = mysqli_query($database, $query);
+
+            if(!$result){
+                return null;
+            }
+
+            $assoc = mysqli_fetch_assoc($result);
+            return new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'], 'category' => $assoc['category']));
+
+        }
+
         public static function getCategoryItems($categoryId){
             if(gettype($categoryId) == "string"){
                 global $database;
@@ -103,7 +118,7 @@
                 }
                 
                 while($assoc = mysqli_fetch_assoc($result)){
-                    array_push($arr, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'])));
+                    array_push($arr, new Item(array('id' => $assoc['id'], 'name' => $assoc['name'],'price' => $assoc['price'], 'category' => $assoc['category'])));
                 }
                 return $arr;
             } else {

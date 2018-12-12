@@ -5,8 +5,8 @@
 
         public function Response($obj){
             if(gettype($obj) == "array"){
-                if(array_key_exists("message")){
-                    $this->$obj["message"];
+                if(array_key_exists("message", $obj)){
+                    $this->message = $obj["message"];
                 }
             }
         }

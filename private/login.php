@@ -1,4 +1,7 @@
+<?php 
+  session_start();
 
+<<<<<<< HEAD
 <?php
   // put your title for the page here, otherwise it's gonna be the default "TOROS"
   $title = "Login";
@@ -12,6 +15,12 @@
 ?>
 
 
+=======
+  if(isset($_SESSION['user'])){
+    header("Location: index.php");
+  }
+?>
+>>>>>>> 24b5df507e7d88561d8a632e047992c8e0c356b7
 <!DOCTYPE html>
 <html lang="en">
   <head>
