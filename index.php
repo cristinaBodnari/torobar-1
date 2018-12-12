@@ -20,16 +20,18 @@
   </head>
   <body>
   <!-- jumbotron -->
-    <style>  .JumbotronHeaderImg{
-  /*background-image: url("images/woodPlatesinBar.jpg");
-  background-size: cover;*/
-  background-color: darkgreen;
- }</style>
+    <style> 
+         .JumbotronHeaderImg{
+           /*background-image: url("images/woodPlatesinBar.jpg");
+            background-size: cover;*/
+            background-color: black;
+          }
+    </style>
 
        <div class="jumbotron jumbotron-fluid text-white JumbotronHeaderImg">
           <div class="container text-center pt-5 ">
             <h1 class="display-2 m-3">ToroBar</h1>
-              <!-- <img src="images/woodPlatesinBar.jpg" alt="toro"> -->
+             
              <div class="btn-group" role="group" aria-label="Basic example">
               <nav class="nav nav-pills nav-justified navbar-expand-sm">
                 <a class="button btn-light btn-lg m-2" href="about.php">About</a>
@@ -39,7 +41,7 @@
               </nav>
              </div> 
           </div>
-        </div>  
+         
     
   <!-- /jumbotron -->   
     
@@ -52,14 +54,9 @@
             <img class="card-img-top" src="images/gløgg.jpg" alt="fængslet" height="260" width="180">
             <div class="card-body">
              <h4 class="card-title">Drinks Specials</h4>
-
-<<<<<<< HEAD
              <p class="card-text">Vores hjemmelavet gløgg er kun 50,- per glas. Kom og smag! Skål!</p>
-             <a href="#menu" class="btn btn-primary">See all drinks</a>
-=======
-             <p class="card-text">"Gløgg"! Vores hjemmelavet gløgg er kun 50,- per glas.</p>
-             <a href="#menu" class="btn btn-light">See all events</a>
->>>>>>> 19bdc6969f954ae72e6bc7f16dcf142fca2a33f2
+             <a href="menu.php" class="btn btn-light">See all Drinks</a>
+            
            </div>
           </div>
         </div>
@@ -71,11 +68,11 @@
             <div class="card-body">
              <h4 class="card-title"><?php echo $nearest_event->title?></h4>
              <p class="card-text"><?php echo $nearest_event->description?></p>
-<<<<<<< HEAD
-             <a href="/menu" class="btn btn-primary">See all events</a>
-=======
-             <a href="/menu" class="btn btn-light">See all Drinks</a>
->>>>>>> 19bdc6969f954ae72e6bc7f16dcf142fca2a33f2
+
+             <a href="events.php" class="btn btn-primary">See all events</a>
+
+             
+
            </div>
           </div>
         </div>
@@ -99,7 +96,7 @@
             <div class="card-body">
              <h4 class="card-title">Happy Hour</h4>
              <p class="card-text"> Fra 12-20 har vi 20% rabat til alle vores drinks, øl og vin.</p>
-             <a href="#menu" class="btn btn-light">See All Drinks</a>
+             <a href="contact.php" class="btn btn-light">See Opening hours</a>
            </div>
           </div>
         </div>
@@ -113,3 +110,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<?php 
+  require_once("shared/footer.php");
+?>

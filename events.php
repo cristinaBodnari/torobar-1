@@ -17,19 +17,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css"/>
+    <style> 
+         .JumbotronHeaderImg{
+           /*background-image: url("images/woodPlatesinBar.jpg");
+            background-size: cover;*/
+            background-color: black;
+
+          }
+    </style>
+
+
   </head>
   <body>
       
     <!-- jumbotron -->
      <div class="jumbotron jumbotron-fluid text-white JumbotronHeaderImg">
-        <div class="container text-center pt-5 ">
-          <h1 class="display-2 m-3">Events</h1>
-        </div>
-      </div>  
+          <div class="container text-center pt-5 ">
+            <h1 class="display-2 m-3">Events</h1>
+              
+             
+          </div>
+        </div>  
+
     <!-- /jumbotron -->  
   
   <!-- Events -->
-  <div class="container pt-4"> <!-- /open container --> 
+  <div class="container pt-1"> <!-- /open container --> 
       <div class="row">
         <?php if($events != null) {?>
           <?php foreach($events as $event) {?>
@@ -53,7 +66,7 @@
            </div>
         </div>
         <?php } ?>
-
+</div>
       </div>   
      <!-- /Gallery --> 
     </div>     <!-- /close container -->    

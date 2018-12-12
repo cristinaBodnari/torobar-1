@@ -1,14 +1,18 @@
 
       <!-- footer and newsletter form -->
-      <div class="container pt-4">
+      <div class="container pt-1 text-white ml-auto">
       <hr>
-      <div class="row py-4 text-muted">
-        <div class="col-md col-xl-5">
-          <p><strong>ToroBar</strong></p>
-          <p>Sunday - Wednesday: 11:00 - 24:00<br/> 
-          Friday - Saturday: 11:00 - 02:00<br/> 
-          Blågårdsgade 2 C,<br/>
-          2200 København</p>
+      <div class="row py-1 text-muted">
+        <div class="col-md col-xl-7">
+          
+          <p>Åbningstider </p>
+          <p>Søn - Tors : fra kl 12:00 - 24:00</p>  
+          <p>Fre - Lør : fra 12:00 - 02:00</p>
+          <br>
+          <p>Blågårdsgade 2C</p>
+          <p>2200 København </p>
+
+
         </div>
         <div class="col-md col-xl-5 ml-auto">
         

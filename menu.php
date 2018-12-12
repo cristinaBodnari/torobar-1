@@ -32,24 +32,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css"/>
 
+    <style> 
+         .JumbotronHeaderImg{
+           /*background-image: url("images/woodPlatesinBar.jpg");
+            background-size: cover;*/
+            background-color: black;
+
+          }
+          tbody{
+            text-align: center;
+          }
+    </style>
+
+
+
   </head>
   <body>
     <!-- jumbotron -->
      <div class="jumbotron jumbotron-fluid text-white JumbotronHeaderImg">
-        <div class="container text-center pt-5 ">
-          <h1 class="display-2 m-3">ToroBar</h1>
-        </div>
-      </div>  
+          <div class="container text-center pt-5 ">
+            <h1 class="display-2 m-3">Menu</h1>
+              
+        
+          </div>
+        </div>  
+  
     <!-- /jumbotron -->  
 
-    <div class="container pt-4"> <!-- /open container --> 
-        <div class="row">
+    
         <?php if($categories != null) { ?>
           <?php foreach($categories as $category) {?>
-          <div class="col-md-6 col-lg-4">
-            <div class="card mb-3">
-              
-              <div class="card-body">
+   <!--        <div class="col-md-6 col-lg-4"> -->
+    <!--         <div class="card mb-3">
+               -->
+             <div class="container card-body text-white"> 
               <h4 class="card-title"><?php echo $category->name?></h4>
                   <table>
                       <thead>
@@ -70,9 +86,8 @@
                       </tr>
                   </table>
 
-              </div>
-              </div>
-            </div>
+          </div>
+              
           <?php } ?>
         <?php } else { ?>
                           

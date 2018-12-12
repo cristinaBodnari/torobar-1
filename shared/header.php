@@ -18,13 +18,7 @@
   </head>
   <body> 
 
-   <style>
-   .JumbotronHeaderImg{
-      background-image: url("images/woodPlatesinBar.jpg");
-      background-size: cover;
-   }
-   </style> 
-
+   
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #000000;">
      <div class="container">
       <a class="navbar-brand order-1 mr-0" style="color: #ffffff" href="#" target="_blank">ToroBar</a>
